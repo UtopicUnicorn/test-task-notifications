@@ -1,0 +1,23 @@
+.overlay{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  opacity: 0.6;
+  background-color: #e4f3e7;
+  &__content{
+    width: 700px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hidden{
+  visibility: hidden;
+}

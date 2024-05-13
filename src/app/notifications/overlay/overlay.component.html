@@ -1,0 +1,7 @@
+<div
+  class="overlay"
+  [class.hidden]="!showVisibility()"
+  (click)="changeVisibility()"
+>
+  <div class="overlay__content" (click)="$event.stopPropagation()"></div>
+</div>
