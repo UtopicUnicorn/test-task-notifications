@@ -15,7 +15,7 @@ export class NotificationsEffects {
       timer(5000).pipe(
         mapTo({
           type: NotificationsActionTypes.DeleteDisplay,
-          payload: action.payload,
+          payload: action.payload.id,
         }),
       ),
     ),
