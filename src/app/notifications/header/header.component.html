@@ -1,7 +1,13 @@
 <div class="header">
-  <div class="item">
-    <button (click)="this.changeVisibility()">
+  <div class="header__item">
+    <button class="header__item__button" (click)="this.changeVisibility()">
+      <ng-container *ngIf="notifications$ | async as pushes">
+        <div *ngIf="pushes.length > 0" class="header__item__button__counter">
+          {{ pushes.length | notificationCounter }}
+        </div>
+      </ng-container>
       <img
+        class="header__item__button__image"
         src="https://static-00.iconduck.com/assets.00/notification-icon-1842x2048-xr57og4y.png"
         alt=""
       />
