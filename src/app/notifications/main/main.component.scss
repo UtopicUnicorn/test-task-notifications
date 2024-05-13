@@ -4,6 +4,6 @@
   height: calc(100% - #{$header-height});
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #fff;
 }
