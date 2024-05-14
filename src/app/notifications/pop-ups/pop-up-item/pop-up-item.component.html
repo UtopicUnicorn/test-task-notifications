@@ -1,0 +1,14 @@
+<div class="pop-up" (mouseover)="hidden = false" (mouseleave)="hidden = true">
+  <button
+    class="close-button"
+    (click)="action(notification.id)"
+    [class.hidden]="hidden"
+  >
+    <img src="assets/icons/close-icon.png" alt="x" />
+  </button>
+  <div class="info">
+    <p class="notification-title">{{ notification.title }}</p>
+    <p class="notification-message">{{ notification.message }}</p>
+  </div>
+  <p class="notification-date">{{ notification.date | dateTransform }}</p>
+</div>

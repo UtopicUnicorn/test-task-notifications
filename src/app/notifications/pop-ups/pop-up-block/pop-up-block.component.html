@@ -1,0 +1,10 @@
+<div class="pop-up-block" *ngIf="notifications$ | async as pushes">
+  <div *ngFor="let push of pushes" class="height-container" [@heightAnimation]>
+    <div class="animation-height-handler"></div>
+    <app-pop-up-item
+      [notification]="push"
+      [action]="deleteNotification"
+      class="item"
+    ></app-pop-up-item>
+  </div>
+</div>
