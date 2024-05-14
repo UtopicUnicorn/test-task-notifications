@@ -3,16 +3,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { OverlayComponent } from './overlay.component';
 import { OverlayService } from '../services/overlay.service';
 import { By } from '@angular/platform-browser';
+import { provideMockStore } from '@ngrx/store/testing';
 
 describe('OverlayComponent', () => {
   let component: OverlayComponent;
   let fixture: ComponentFixture<OverlayComponent>;
   let service: OverlayService;
+  let storeInitialState = [{}];
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [OverlayComponent],
-      providers: [OverlayService],
+      providers: [
+        OverlayService,
+        provideMockStore({ initialState: storeInitialState }),
+      ],
     }).compileComponents();
   });
 
