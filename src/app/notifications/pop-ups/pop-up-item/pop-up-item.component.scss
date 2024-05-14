@@ -67,3 +67,8 @@
     font-size: 10px;
   }
 }
+
+.close-button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}

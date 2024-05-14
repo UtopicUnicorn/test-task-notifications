@@ -46,7 +46,9 @@ export function notificationReducer(
         notifications: state.notifications.filter(
           (item) => item.id !== action.payload,
         ),
-        displayedNotifications: state.displayedNotifications,
+        displayedNotifications: state.displayedNotifications.filter(
+          (item) => item.id !== action.payload,
+        ),
       };
     }
     case NotificationsActionTypes.DeleteDisplay: {

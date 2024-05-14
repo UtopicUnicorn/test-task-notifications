@@ -3,5 +3,19 @@
   [class.hidden]="!showVisibility()"
   (click)="changeVisibility()"
 >
-  <div class="overlay__content" (click)="$event.stopPropagation()"></div>
+  <div class="overlay__content" (click)="$event.stopPropagation()">
+    <button class="overlay-close-button" (click)="changeVisibility()">
+      <img src="assets/icons/close-icon.png" alt="x" />
+    </button>
+    <button class="archive-button" (click)="archive()">Archive</button>
+    <div *ngIf="notifications$ | async as pushes" class="notification-stack">
+      <div *ngFor="let push of pushes" [@notificationAnimation]="pushes.length">
+        <app-pop-up-item
+          [notification]="push"
+          [action]="deleteNotification"
+          class="item"
+        ></app-pop-up-item>
+      </div>
+    </div>
+  </div>
 </div>
