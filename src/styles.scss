@@ -1,3 +1,4 @@
+@import "scss/variables";
 :root,
 html,
 body {
@@ -6,4 +7,8 @@ body {
   max-width: 100%;
   padding: 0;
   margin: 0;
+  @media (max-width: $mobile-width) {
+    overflow-x: hidden;
+  }
+
 }

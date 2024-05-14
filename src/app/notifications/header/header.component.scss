@@ -7,6 +7,11 @@
   padding: 0 100px 0 100px;
   background-color: #e4f3e7;
 
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    justify-content: center;
+  }
+
   &__item{
     display: flex;
     align-items: center;
