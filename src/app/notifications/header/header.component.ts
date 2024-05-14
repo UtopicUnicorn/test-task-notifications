@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     private store: Store<{ notifications: NotificationsStateInterface }>,
   ) {
     this.notifications$ = this.store.select(
-      (state) => state.notifications.displayedNotifications,
+      (state) => state.notifications.notifications,
     );
   }
 
