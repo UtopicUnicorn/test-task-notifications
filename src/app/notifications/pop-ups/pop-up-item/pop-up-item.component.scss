@@ -2,10 +2,11 @@
   height: 100px;
   width: 300px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   position: relative;
   box-sizing: border-box;
   border: 1px solid black;
+  box-shadow: 6px 5px 5px rgba(128, 128, 128, 0.5);
 
   .hidden{
     visibility: hidden;
@@ -46,13 +47,13 @@
     }
   }
   .notification-title{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-overflow: ellipsis;
   }
 
   .notification-message{
-    font-size: 12px;
+    font-size: 14px;
     display: -webkit-box;
     width: 80%;
     -webkit-box-orient: vertical;
