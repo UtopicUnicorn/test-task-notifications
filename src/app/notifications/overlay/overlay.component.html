@@ -9,7 +9,10 @@
     </button>
     <button class="archive-button" (click)="archive()">Archive</button>
     <div *ngIf="notifications$ | async as pushes" class="notification-stack">
-      <div *ngFor="let push of pushes" [@notificationAnimation]="pushes.length">
+      <div
+        *ngFor="let push of pushes; trackBy: trackBy"
+        [@notificationAnimation]="pushes.length"
+      >
         <app-pop-up-item
           [notification]="push"
           [action]="deleteNotification"

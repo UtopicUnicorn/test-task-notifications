@@ -63,4 +63,8 @@ export class OverlayComponent implements OnInit {
   deleteNotification = (id: number) => {
     this.store.dispatch(new DeleteNotification(id));
   };
+
+  public trackBy(index: number, item: NotificationInterface) {
+    return item.id;
+  }
 }
