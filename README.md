@@ -1,27 +1,39 @@
-# TestTaskNotifications
+# Тестовое задание "Модуль уведомлений" 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+## Инструкция по работе с проектом
 
-## Development server
+1. Скачать репозиторий
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+git clone git@github.com:UtopicUnicorn/test-task-notifications.git
+```
+2. Перейти в директорию с проектом и установить необходимые пакеты
 
-## Code scaffolding
+```bash
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. Запуск проекта
+```bash
+npm run start
+```
 
-## Build
+4. Для получения уведомления развернуть backend [из этого репозитория](https://github.com/UtopicUnicorn/test-task-notifications-backend)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Релизованый функцианал:
 
-## Running end-to-end tests
+1. В хедере отображается счетчик уведомлений;
+2. При нажатии на кнопку уведомлений открывается оверлей со списком уведомлений;
+3. Максимальное число отображаемых уведомлений - 4;
+4. Уведомление исчезает через 5 секунд после появления;
+5. Добавлена кнопка архивации(удаления) уведомлений;
+6. При наведении на уведомление появляется кнопка с его закрытием;
+7. Добавлены анимации на появление и удаление уведомления.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Возможные доработки:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Добавление большего числа тестов;
+2. Добавление большей адаптивности в зависимости от размера экрана;
+3. Переработка дизайна.
