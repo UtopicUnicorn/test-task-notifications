@@ -59,4 +59,8 @@ export class PopUpBlockComponent implements OnInit {
 
   deleteNotification = (id: number) =>
     this.store.dispatch(new DeleteDisplayNotification(id));
+
+  public trackBy(index: number, item: NotificationInterface) {
+    return item.id;
+  }
 }

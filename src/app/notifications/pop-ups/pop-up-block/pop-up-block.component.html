@@ -1,5 +1,9 @@
 <div class="pop-up-block" *ngIf="notifications$ | async as pushes">
-  <div *ngFor="let push of pushes" class="height-container" [@heightAnimation]>
+  <div
+    *ngFor="let push of pushes; trackBy: trackBy"
+    class="height-container"
+    [@heightAnimation]="pushes.length"
+  >
     <div class="animation-height-handler"></div>
     <app-pop-up-item
       [notification]="push"
